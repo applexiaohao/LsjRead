@@ -29,12 +29,6 @@
 				toolbarItemList:['书城','书架','任务','个人中心'],
 			}
 		},
-		mounted(){
-			setInterval(()=>{
-				self.count ++;
-			},2000);
-		},
-	
 		methods: {
 			...mapMutations(['exchangeRootComponent']),
 			onToolBarItemClick(e) {
