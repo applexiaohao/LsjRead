@@ -9,10 +9,6 @@ const store = new Vuex.Store({
     },
     mutations: {
         exchangeRootComponent(state, componentIndex) {
-			uni.showToast({
-				title:`${componentIndex}`,
-				icon:"none"
-			});
             state.currentRootComponentIndex = componentIndex;
         }
     }

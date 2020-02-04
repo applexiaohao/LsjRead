@@ -28,19 +28,19 @@ $uni-text-color-placeholder: #808080;
 $uni-text-color-disable:#c0c0c0;
 
 /* 背景颜色 */
-$uni-bg-color:rgba(255,0,0,1);
-$uni-bg-color-grey:#f8f8f8;
+$uni-bg-color:#FFFFFF;
+$uni-bg-color-grey:#999999;
 $uni-bg-color-hover:#f1f1f1;//点击状态颜色
 $uni-bg-color-mask:rgba(0, 0, 0, 0.4);//遮罩颜色
 
 /* 边框颜色 */
-$uni-border-color:#c8c7cc;
+$uni-border-color:rgba($color: #999999, $alpha: 0.25);
 
 /* 尺寸变量 */
 
 /* 文字尺寸 */
 $uni-font-size-sm:24upx;
-$uni-font-size-base:28upx;
+$uni-font-size-base:30upx;
 $uni-font-size-lg:32upx;
 
 /* 图片尺寸 */
