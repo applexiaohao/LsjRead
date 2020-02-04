@@ -1,7 +1,7 @@
 <template>
-	<view v-if="width" :style="'width:'+width+';'+(square?'height:'+width:'')" class="uni-grid-item">
+	<view v-if="width" class="uni-grid-item" :style="{'width':width,'height':square?width:'', 'margin-right':horizontalInterval,'margin-top':verticalInterval}">
 		<view :class="{ 'uni-grid-item--border': showBorder,  'uni-grid-item--border-top': showBorder && index < column, 'uni-highlight': highlight }"
-		 :style="{  'border-right-color': borderColor ,'border-bottom-color': borderColor ,'border-top-color': borderColor }"
+		 :style="{  'border-right-color': borderColor ,'border-bottom-color': borderColor ,'border-top-color': borderColor}"
 		 class="uni-grid-item__box" @click="_onClick">
 			<slot />
 		</view>
@@ -32,6 +32,7 @@
 			}
 		},
 		created() {
+			const self = this;
 			this.column = this.grid.column
 			this.showBorder = this.grid.showBorder
 			this.square = this.grid.square
@@ -40,6 +41,8 @@
 			this.left = this.ver === 0 ? this.grid.ver : this.ver
 			this.borderColor = this.grid.borderColor
 			this.grid.children.push(this)
+			this.horizontalInterval = ((this.grid.children.length % this.column) == 0) ? "0px" : (this.grid.horizontalInterval + 'px')
+			this.verticalInterval = (this.grid.children.length <= this.column) ? "0px" : (this.grid.verticalInterval + 'px')
 			// this.grid.init()
 			this.width = this.grid.width
 		},
@@ -67,6 +70,7 @@
 		/* #ifndef APP-NVUE */
 		height: 100%;
 		display: flex;
+		background-color: #4CD964;
 		/* #endif */
 	}
 

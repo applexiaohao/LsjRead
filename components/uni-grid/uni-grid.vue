@@ -16,7 +16,7 @@
 			// 每列显示个数
 			column: {
 				type: Number,
-				default: 2
+				default: 3
 			},
 			// 是否显示边框
 			showBorder: {
@@ -36,6 +36,14 @@
 			highlight: {
 				type: Boolean,
 				default: true
+			},
+			horizontalInterval:{
+				type:Number,
+				default:0
+			},
+			verticalInterval:{
+				type:Number,
+				default:0
 			}
 		},
 		provide() {
@@ -76,13 +84,13 @@
 					.select(`#${this.elId}`)
 					.boundingClientRect()
 					.exec(ret => {
-						this.width = parseInt((ret[0].width-10) / this.column) + 'px'
+						this.width = parseInt((ret[0].width - 0.5 - this.horizontalInterval * (this.column - 1)) / this.column) + 'px'
 						fn(this.width)
 					})
 				// #endif
 				// #ifdef APP-NVUE
 				dom.getComponentRect(this.$refs['uni-grid'], (ret) => {
-					this.width = parseInt((ret.size.width-10) / this.column)  + 'px'
+					this.width = parseInt((ret.size.width - 0.5 - this.horizontalInterval * (this.column - 1)) / this.column)  + 'px'
 					fn(this.width)
 				})
 				// #endif
