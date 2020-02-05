@@ -3,7 +3,10 @@
 		{
 			"path": "pages/index/LSJStoryRootIndex",
 			"style": {
-				"navigationBarTitleText": "老司机小说网"
+				"navigationBarTitleText": "老司机小说网",
+				"app-plus":{
+					"scrollIndicator":"none"
+				}
 			}
 		}
 	],

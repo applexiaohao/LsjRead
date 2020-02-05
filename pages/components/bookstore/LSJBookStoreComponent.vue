@@ -17,33 +17,58 @@
 				<text class="item unselect">{{tabbarItemList[4]}}</text>
 			</div>
 		</div>
-		<div class="search"></div>
-		<div class="mainScroller"></div>
-		<div class="sectionScroller"></div>
+		<scroll-view class="bookStoreScrollView" scroll-y="true" show-scrollbar="false">
+			<bookstoresearch></bookstoresearch>
+			<mainScroller></mainScroller>
+			<announcement></announcement>
+			<view class="bookStoreSeparateLine"></view>
+			<recommendsection></recommendsection>
+			<recommendbooklist></recommendbooklist>
+		</scroll-view>
 	</div>
 </template>
 
 <script>
-	export default{
-		data(){
+	import LSJBookStoreSearchComponent from './bookstoresearch/LSJBookStoreSearchComponent.vue'
+	import LSJBookStoreMainScrollerComponent from './bookstoremainscroller/LSJBookStoreMainScrollerComponent.vue'
+	import LSJBookStoreAnnouncementComponent from "./bookstoreannouncement/LSJBookStoreAnnouncementComponent.vue"
+	import LSJBookStoreRecommendSectionComponent from './bookstoresection/LSJBookStoreRecommendSectionComponent.vue'
+	import LSJBookStoreRecommendList from './bookstorelist/LSJBookStoreRecommendList.vue'
+
+	export default {
+		components: {
+			bookstoresearch: LSJBookStoreSearchComponent,
+			mainScroller: LSJBookStoreMainScrollerComponent,
+			announcement: LSJBookStoreAnnouncementComponent,
+			recommendsection: LSJBookStoreRecommendSectionComponent,
+			recommendbooklist: LSJBookStoreRecommendList
+		},
+		mounted() {
+			uni.setNavigationBarTitle({
+				title: '老司机小说网'
+			})
+		},
+		data() {
 			return {
-				tabbarItemList:['推荐','女频','男频','听书','漫画','鬼故事'],
+				tabbarItemList: ['推荐', '女频', '男频', '听书', '漫画', '鬼故事'],
 			}
 		}
 	}
 </script>
 
 <style>
-	.bookStoreContainer{
+	.bookStoreContainer {
 		display: flex;
 		flex-grow: 1;
 		flex-direction: column;
 	}
+
 	.tabbar {
 		display: flex;
 		flex-direction: row;
 		height: 40px;
 	}
+
 	.tabbarItem {
 		display: flex;
 		flex-grow: 1;
@@ -54,38 +79,37 @@
 		border-radius: 15px;
 		align-items: center;
 	}
+
 	.item {
 		display: flex;
 		align-self: center;
 		text-align: right;
-		font-size:16px;
-		font-weight:bold;
-		line-height:30px;
+		font-size: 16px;
+		font-weight: bold;
+		line-height: 30px;
 	}
-	
+
 	.select {
 		display: flex;
-		color:rgba(255,39,66,1);
+		color: rgba(255, 39, 66, 1);
 	}
-	
+
 	.unselect {
 		display: flex;
-		color:rgba(127,127,129,1);
+		color: rgba(127, 127, 129, 1);
 	}
-	.search{
-		display: flex;
-		background-color: #007AFF;
-		height: 40px;
-	}
-	.mainScroller{
-		display: flex;
-		height: 120px;
-		background-color: red;
-	}
-	.sectionScroller{
-		display: flex;
-		flex-grow: 1;
+
+	.bookStoreSeparateLine {
+		background-color: #D6D6D6;
+		height: 1px;
 		width: 100%;
-		background-color: #007AFF;
+	}
+	.bookStoreScrollView{
+		display: flex;
+		position: absolute;
+		top: 40px;
+		left: 0px;
+		right: 0px;
+		bottom: 51px;
 	}
 </style>
