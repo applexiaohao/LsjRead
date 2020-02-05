@@ -1,17 +1,42 @@
 <template>
 	<div class="userMissionContainer">
-		我是任务面板
+		<accountMission></accountMission>
+		<div class="mmm">
+			<usermissionlist></usermissionlist>
+		</div>
 	</div>
 </template>
 
 <script>
+	import LSJUserMissionAccountComponent from "./accountmission/LSJUserMissionAccountComponent.vue"
+	import LSJUserMissionList from "./usermissionlist/LSJUserMissionList.vue"
+	
+	export default {
+		mounted() {
+			uni.setNavigationBarTitle({
+				title:'任务'
+			})
+		},
+		components:{
+			usermissionlist:LSJUserMissionList,
+			accountMission:LSJUserMissionAccountComponent
+		}
+	}
 </script>
 
-<style>
+<style lang="scss">
 	.userMissionContainer{
 		display: flex;
-		flex-grow: 1;
+		position: absolute;
+		left: 0px;
+		right: 0px;
+		top: 0px;
+		bottom: $lsj-toolbar-height;
 		flex-direction: column;
-		background-color: blue;
+	}
+	.mmm{
+		display: flex;
+		position: relative;
+		flex-grow: 1;
 	}
 </style>
