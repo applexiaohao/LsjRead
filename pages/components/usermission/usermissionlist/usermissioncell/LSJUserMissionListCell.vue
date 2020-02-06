@@ -1,15 +1,15 @@
 <template>
 	<view class="userMissionCellContainer">
-		<div class="userMissionCellSplitLine"></div>
-		<div class="userMissionCellContent">
-			<div class="userMissionCellTitleContainer">
+		<view class="userMissionCellSplitLine"></view>
+		<view class="userMissionCellContent">
+			<view class="userMissionCellTitleContainer">
 				<text class="userMissionCellTitle">{{'首次绑定手机号 '}}</text>
 				<text class="userMissionCellSummary">{{'免费+4'}}</text>
-			</div>
-			<div class="userMissionCellButtonContainer selectedCellButtonContainer">
+			</view>
+			<view class="userMissionCellButtonContainer selectedCellButtonContainer">
 				<text class="userMissionCellButton selectedCellButton">{{'已完成'}}</text>
-			</div>
-		</div>
+			</view>
+		</view>
 	</view>
 </template>
 

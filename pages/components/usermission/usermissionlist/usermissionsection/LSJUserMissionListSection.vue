@@ -1,10 +1,10 @@
 <template>
 	<view class="userMissionSectionContainer">
-		<div class="userMissionSectionMargin"></div>
-		<div class="userMissionSectionTitleContainer">
-			<div class="userMissionSectionHead"></div>
+		<view class="userMissionSectionMargin"></view>
+		<view class="userMissionSectionTitleContainer">
+			<view class="userMissionSectionHead"></view>
 			<text class="userMissionSectionTitle">{{'福利攻略'}}</text>
-		</div>
+		</view>
 		<text class="userMissionSectionTitleSummary">{{'规则说明：推广好友阅读，可永久增加免费阅读次数'}}
 		</text>
 	</view>

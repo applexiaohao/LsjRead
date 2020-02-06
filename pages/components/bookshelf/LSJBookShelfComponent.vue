@@ -1,14 +1,14 @@
 <template>
-	<div class="bookShelfContainer">
+	<view class="bookShelfContainer">
 		<uni-grid :column="3" :square="false" :show-border="false" :horizontal-interval="30" :vertical-interval="20" class="bookGridContainer">
 			<uni-grid-item v-for="(bookItem,index) in bookShelfList" :key="bookItem.bookId" class="bookItemContainer" :index="index">
 				<bookItem :book="bookItem"></bookItem>
 			</uni-grid-item>
-			<uni-grid-item class="bookItemContainer" :index="index">
+			<uni-grid-item class="bookItemContainer">
 				<bookAddItem ></bookAddItem>
 			</uni-grid-item>
 		</uni-grid>
-	</div>
+	</view>
 </template>
 
 <script>

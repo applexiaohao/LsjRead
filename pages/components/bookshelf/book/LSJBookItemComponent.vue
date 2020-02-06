@@ -1,9 +1,9 @@
 <template>
-	<div class="bookContainer">
-		<div class="bookImage"></div>
+	<view class="bookContainer" @tap="onTapBookItem">
+		<view class="bookImage"></view>
 		<text class="bookTitle">{{book.title}}</text>
 		<text class="bookProgress">{{book.progress}}</text>
-	</div>
+	</view>
 </template>
 
 <script>
@@ -19,6 +19,13 @@
 			// 	title:this.book.title,
 			// 	icon:"none"
 			// })
+		},
+		methods:{
+			onTapBookItem(e){
+				uni.navigateTo({
+					url:'../../../../book/homepage/LSJBookHomePage'
+				});
+			}
 		}
 	}
 </script>

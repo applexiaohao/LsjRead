@@ -1,10 +1,10 @@
 <template>
 	<view class="bookStoreRecommendSectionContainer">
-		<div class="bookStoreRecommendSectionMargin"></div>
-		<div class="bookStoreRecommendSectionTitleContainer">
-			<div class="bookStoreRecommendSectionHead"></div>
+		<view class="bookStoreRecommendSectionMargin"></view>
+		<view class="bookStoreRecommendSectionTitleContainer">
+			<view class="bookStoreRecommendSectionHead"></view>
 			<text class="bookStoreRecommendSectionTitle">{{'热门小说'}}</text>
-		</div>
+		</view>
 		<text class="bookStoreRecommendSectionTitleSummary">{{'大老师推荐'}}
 		</text>
 	</view>

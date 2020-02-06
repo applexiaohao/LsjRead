@@ -1,49 +1,49 @@
 <template>
-	<div class="voucherCenterContainer">
-		<div class="preferential-item" @click="onPreferentialItemClick">
+	<view class="voucherCenterContainer">
+		<view class="preferential-item" @tap="onPreferentialItemClick">
 			<view class="preferential-item-feature">{{preferential.feature}}</view>
-			<div class="preferential-item-content">
+			<view class="preferential-item-content">
 				<view class="preferential-item-title">{{preferential.title}}</view>
 				<view class="preferential-item-summary">{{preferential.summary}}</view>
-			</div>
-			<div class="preferential-item-button">
+			</view>
+			<view class="preferential-item-button" @tap="onPreferentialItemClick">
 				<view class="preferential-item-button-title">{{'立即充值'}}</view>
-			</div>
-		</div>
+			</view>
+		</view>
 		
-		<div class="boughtContainer">
-		    <div class="boughtItemContainer">
+		<view class="boughtContainer">
+		    <view class="boughtItemContainer" @tap="onBoughtItemClick" id="0">
 		        <text class="boughtItemPrice">{{'￥' + boughtItemList[0].price}}</text>
 				<text class="boughtItemValue">{{boughtItemList[0].value}}</text>
-		    </div>
-			<div class="boughtItemContainer">
+		    </view>
+			<view class="boughtItemContainer" @tap="onBoughtItemClick" id="1">
 			    <text class="boughtItemPrice">{{'￥' + boughtItemList[1].price}}</text>
 				<text class="boughtItemValue">{{boughtItemList[1].value}}</text>
-			</div>
-		</div>
+			</view>
+		</view>
 		
-		<div class="boughtContainer">
-		    <div class="boughtItemContainer">
+		<view class="boughtContainer">
+		    <view class="boughtItemContainer" @tap="onBoughtItemClick" id="2">
 		        <text class="boughtItemPrice">{{'￥' + boughtItemList[2].price}}</text>
 				<text class="boughtItemValue">{{boughtItemList[2].value}}</text>
-		    </div>
-			<div class="boughtItemContainer">
+		    </view>
+			<view class="boughtItemContainer" @tap="onBoughtItemClick" id="3">
 			    <text class="boughtItemPrice">{{'￥' + boughtItemList[3].price}}</text>
 				<text class="boughtItemValue">{{boughtItemList[3].value}}</text>
-			</div>
-		</div>
+			</view>
+		</view>
 		
-		<div class="boughtContainer">
-		    <div class="boughtItemContainer">
+		<view class="boughtContainer">
+		    <view class="boughtItemContainer" @tap="onBoughtItemClick" id="4">
 		        <text class="boughtItemPrice">{{'￥' + boughtItemList[4].price}}</text>
 				<text class="boughtItemValue">{{boughtItemList[4].value}}</text>
-		    </div>
-			<div class="boughtItemContainer">
+		    </view>
+			<view class="boughtItemContainer" @tap="onBoughtItemClick" id="5">
 			    <text class="boughtItemPrice">{{'￥' + boughtItemList[5].price}}</text>
 				<text class="boughtItemValue">{{boughtItemList[5].value}}</text>
-			</div>
-		</div>
-	</div>
+			</view>
+		</view>
+	</view>
 </template>
 
 <script>
@@ -86,7 +86,20 @@
 				]
 			}
 		},
-		components: {uniGrid,uniGridItem}
+		components: {uniGrid,uniGridItem},
+		methods:{
+			onPreferentialItemClick(e){
+				uni.showToast({
+					title:'今日充值优惠'
+				});
+			},
+			onBoughtItemClick(e){
+				uni.showToast({
+					title:this.boughtItemList[e.currentTarget.id].value,
+					icon:'none'
+				});
+			}
+		}
 	}
 </script>
 

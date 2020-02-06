@@ -1,5 +1,5 @@
 <template>
-	<div class="recommendListContainer">
+	<view class="recommendListContainer">
 		<scroll-view class="recommendListScroller" scroll-x="true" show-scrollbar="false">
 			<view v-for="(bookItem,index) in bookList" :class="{ 'recommendBookItemContainerMargin': index < (bookList.length - 1) ,'recommendBookItemContainer':true }"
 			 :key="index" @tap.stop="onClickBook" v-bind:id="bookItem.title">
@@ -10,7 +10,7 @@
 				</view>
 			</view>
 		</scroll-view>
-	</div>
+	</view>
 </template>
 
 <script>

@@ -1,10 +1,10 @@
 <template>
-	<div class="userMissionContainer">
+	<view class="userMissionContainer">
 		<accountMission></accountMission>
-		<div class="mmm">
+		<view class="mmm">
 			<usermissionlist></usermissionlist>
-		</div>
-	</div>
+		</view>
+	</view>
 </template>
 
 <script>

@@ -27,11 +27,6 @@
 			uni.setNavigationBarTitle({
 				title: '个人中心'
 			});
-			// const systemInfo = uni.getSystemInfoSync();
-			// uni.showToast({
-			// 	title: systemInfo.windowHeight,
-			// 	icon:'none'
-			// });
 		},
 		components: {
 			loginComponent: LSJUserCenterLoginComponent,

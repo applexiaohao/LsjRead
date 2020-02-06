@@ -1,7 +1,7 @@
 <template>
-	<div class="bookAddContainer">
-		<div class="bookAddImage"></div>
-	</div>
+	<view class="bookAddContainer">
+		<view class="bookAddImage"></view>
+	</view>
 </template>
 
 <script>

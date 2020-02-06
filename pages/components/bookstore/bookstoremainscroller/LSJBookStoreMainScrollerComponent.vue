@@ -1,8 +1,8 @@
 <template>
-	<div class="mainScrollerContainer">
+	<view class="mainScrollerContainer">
 		<scroll-view class="mainScroller" scroll-x="true" show-scrollbar="false" @scroll="onScroll">
 			<view v-for="(bookItem,index) in bookList" class="bookItemContainer" :key="index" v-bind:id="'v' + index">
-
+				{{index+'做个样子'}}
 			</view>
 		</scroll-view>
 		<view class="mainScrollerPageControl">
@@ -13,7 +13,7 @@
 				<view v-if="currentIndex = (bookList.length - 1)" :style="{'width':'5px'}"></view>
 			</block>
 		</view>
-	</div>
+	</view>
 </template>
 
 <script>

@@ -1,31 +1,31 @@
 <template>
-	<div class="accountMissionContainer">
-		<div class="accountMissionBg"></div>
-		<div class="accountMissionContent">
-			<div class="accountMissionSummayContainer">
-				<div class="accountImageUrl"></div>
-				<div class="accountMissionSummay">
-					<div class="accountMissionSummayTitle">{{'画家'}}</div>
-					<div class="accountMissionSummayChapterInfo">{{'已读章节:3  剩余免费章节:22'}}</div>
-				</div>
-			</div>
-			<div class="accountMissionSplitLine"></div>
-			<div class="accountMissionDetail">
-				<div class="accountMissionDetailItem">
-					<div class="accountMissionDetailItemTitle">{{'青铜5'}}</div>
-					<div class="accountMissionDetailItemSummary">{{'每日免费25章'}}</div>
-				</div>
-				<div class="accountMissionDetailItem">
-					<div class="accountMissionDetailItemTitle">{{'距离下一等级'}}</div>
-					<div class="accountMissionDetailItemSummary">{{'还差一人'}}</div>
-				</div>
-				<div class="accountMissionDetailItem">
-					<div class="accountMissionDetailItemTitle">{{'青铜4'}}</div>
-					<div class="accountMissionDetailItemSummary">{{'每日免费30章'}}</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	<view class="accountMissionContainer">
+		<view class="accountMissionBg"></view>
+		<view class="accountMissionContent">
+			<view class="accountMissionSummayContainer">
+				<view class="accountImageUrl"></view>
+				<view class="accountMissionSummay">
+					<view class="accountMissionSummayTitle">{{'画家'}}</view>
+					<view class="accountMissionSummayChapterInfo">{{'已读章节:3  剩余免费章节:22'}}</view>
+				</view>
+			</view>
+			<view class="accountMissionSplitLine"></view>
+			<view class="accountMissionDetail">
+				<view class="accountMissionDetailItem">
+					<view class="accountMissionDetailItemTitle">{{'青铜5'}}</view>
+					<view class="accountMissionDetailItemSummary">{{'每日免费25章'}}</view>
+				</view>
+				<view class="accountMissionDetailItem">
+					<view class="accountMissionDetailItemTitle">{{'距离下一等级'}}</view>
+					<view class="accountMissionDetailItemSummary">{{'还差一人'}}</view>
+				</view>
+				<view class="accountMissionDetailItem">
+					<view class="accountMissionDetailItemTitle">{{'青铜4'}}</view>
+					<view class="accountMissionDetailItemSummary">{{'每日免费30章'}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
 </template>
 
 <script>

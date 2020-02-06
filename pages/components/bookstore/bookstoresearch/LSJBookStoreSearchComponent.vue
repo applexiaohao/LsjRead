@@ -1,14 +1,30 @@
 <template>
 	<view class="bookstoreSearchContainer">
-		<view class="bookstoreSearchBarContainer">
+		<view class="bookstoreSearchBarContainer" @tap="onClickSearch">
 			<view class="bookstoreSearchBarImg"></view>
 			<text class="bookstoreSearchInput">{{'搜小说名等等'}}</text>
 		</view>
-		<view class="bookstoreSearchHistoryButton"></view>
+		<view class="bookstoreSearchHistoryButton" @tap="onClickHistory"></view>
 	</view>
 </template>
 
 <script>
+	export default{
+		methods:{
+			onClickSearch(e){
+				uni.showToast({
+					title:'去搜索，等待创建',
+					icon:'none'
+				})
+			},
+			onClickHistory(e){
+				uni.showToast({
+					title:'去历史记录，等待创建',
+					icon:'none'
+				})
+			}
+		}
+	}
 </script>
 
 <style>

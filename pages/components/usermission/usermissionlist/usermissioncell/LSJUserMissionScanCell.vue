@@ -1,22 +1,22 @@
 <template>
 	<view class="userMissionScanCellContainer">
 		<text class="userMissionScanTitle">{{'扫码开始阅读'}}</text>
-		<div class="userMissionScanCellCodeImage"></div>
-		<div class="userMissionScanCellAddressUrlContainer">
+		<view class="userMissionScanCellCodeImage"></view>
+		<view class="userMissionScanCellAddressUrlContainer">
 			<text class="userMissionScanCellAddressUrl">{{';lsdkjfa;ksdjf;alksjdf;laksjdf;fakjsdf;lajs;f'}}</text>
-		</div>
+		</view>
 		<text class="userMissionScanCellSummary">{{'阅读前请保存官方二维码，被封后可在官方继续阅读'}}</text>
-		<div class="userMissionScanCellButtonContainer">
-			<div :style="{'width':'20px'}"></div>
-			<div class="userMissionScanCellButtonSaveContainer">
-				<div class="userMissionScanCellButtonSave">{{'保存二维码'}}</div>
-			</div>
-			<div :style="{'width':'20px'}"></div>
-			<div class="userMissionScanCellButtonCopyContainer">
-				<div class="userMissionScanCellButtonCopy">{{'复制推广链接'}}</div>
-			</div>
-			<div :style="{'width':'20px'}"></div>
-		</div>
+		<view class="userMissionScanCellButtonContainer">
+			<view :style="{'width':'20px'}"></view>
+			<view class="userMissionScanCellButtonSaveContainer">
+				<view class="userMissionScanCellButtonSave">{{'保存二维码'}}</view>
+			</view>
+			<view :style="{'width':'20px'}"></view>
+			<view class="userMissionScanCellButtonCopyContainer">
+				<view class="userMissionScanCellButtonCopy">{{'复制推广链接'}}</view>
+			</view>
+			<view :style="{'width':'20px'}"></view>
+		</view>
 	</view>
 </template>
 

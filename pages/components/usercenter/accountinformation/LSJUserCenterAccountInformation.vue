@@ -1,15 +1,15 @@
 <template>
-	<div class="accountInformationContainer">
-		<view v-for="(accountInformationItem) in accountInformationList" class="accountInformationItem" @click="onInformationClick" :key="accountInformationItem.title" v-bind:id="accountInformationItem.title">
+	<view class="accountInformationContainer">
+		<view v-for="(accountInformationItem) in accountInformationList" class="accountInformationItem" @tap="onInformationClick" :key="accountInformationItem.title" v-bind:id="accountInformationItem.title">
 			<view class="accountInfomation-value">{{accountInformationItem.value}}</view>
 			<view class="accountInfomation-title">{{accountInformationItem.title}}</view>
 		</view>
-		<div class="split-line"></div>
-		<div class="promote-activity">
+		<view class="split-line"></view>
+		<view class="promote-activity" @tap="onTapPromoteActivity">
 			<view class="promote-img"></view>
 			<view class="promote-content">推广可升级</view>
-		</div>
-	</div>
+		</view>
+	</view>
 </template>
 
 <script>
@@ -31,9 +31,15 @@
 		methods:{
 			onInformationClick(e){
 				uni.showToast({
-					title:e.target.id,
-					icon:null
-				})
+					title:e.currentTarget.id,
+					icon:'none'
+				});
+			},
+			onTapPromoteActivity(e){
+				uni.showToast({
+					title:'推广可升级',
+					icon:'none'
+				});
 			}
 		}
 	}

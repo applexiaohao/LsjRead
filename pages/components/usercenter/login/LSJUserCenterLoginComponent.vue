@@ -1,8 +1,8 @@
 <template>
-	<div class="loginComponentContainer">
-		<div class="headImg" />
-		<view class="loginBtn" @click="onClickLogin">登录/注册</view>
-	</div>
+	<view class="loginComponentContainer">
+		<view class="headImg" />
+		<view class="loginBtn" @tap="onClickLogin">登录/注册</view>
+	</view>
 </template>
 
 <script>

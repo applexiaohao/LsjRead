@@ -1,8 +1,8 @@
 <template>
-	<div class="toolbarContainer">
+	<view class="toolbarContainer">
 		<view class="toolbar-split-line"></view>
-		<div class="toolbar">
-			<view v-for="(item,index) in toolbarItemList" class="toolbarItem" @click="onToolBarItemClick" :key="index" v-bind:id="index">
+		<view class="toolbar">
+			<view v-for="(item,index) in toolbarItemList" class="toolbarItem" @tap="onToolBarItemClick" :key="index" v-bind:id="index">
 				<template v-if="currentRootComponentIndex == index">
 					<view class="item" v-bind:id="index" :key="count">
 						{{toolbarItemList[index]}}
@@ -15,8 +15,8 @@
 					</view>
 				</template>
 			</view>
-		</div>
-	</div>
+		</view>
+	</view>
 </template>
 
 <script>

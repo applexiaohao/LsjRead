@@ -1,22 +1,10 @@
 <template>
-	<div class="bookStoreContainer">
-		<div class="tabbar">
-			<div class="tabbarItem">
-				<text class="item select">{{tabbarItemList[0]}}</text>
-			</div>
-			<div class="tabbarItem">
-				<text class="item unselect">{{tabbarItemList[1]}}</text>
-			</div>
-			<div class="tabbarItem">
-				<text class="item unselect">{{tabbarItemList[2]}}</text>
-			</div>
-			<div class="tabbarItem">
-				<text class="item unselect">{{tabbarItemList[3]}}</text>
-			</div>
-			<div class="tabbarItem">
-				<text class="item unselect">{{tabbarItemList[4]}}</text>
-			</div>
-		</div>
+	<view class="bookStoreContainer">
+		<view class="tabbar">
+			<view v-for="(tabbarItem,index) in tabbarItemList" :key="index" v-bind:id="index" class="tabbarItem"  @tap="onTapItem">
+				<text :class="{item:true, select:(selectIndex == index),unselect:(selectIndex != index)}">{{tabbarItem}}</text>
+			</view>
+		</view>
 		<scroll-view class="bookStoreScrollView" scroll-y="true" show-scrollbar="false">
 			<bookstoresearch></bookstoresearch>
 			<mainScroller></mainScroller>
@@ -25,7 +13,7 @@
 			<recommendsection></recommendsection>
 			<recommendbooklist></recommendbooklist>
 		</scroll-view>
-	</div>
+	</view>
 </template>
 
 <script>
@@ -50,7 +38,20 @@
 		},
 		data() {
 			return {
+				selectIndex: 0,
 				tabbarItemList: ['推荐', '女频', '男频', '听书', '漫画', '鬼故事'],
+			}
+		},
+		methods:{
+			onTapItem(e){
+				if (this.selectIndex == e.currentTarget.id){
+					uni.showToast({
+						title:'相同哦~',
+						icon:'none'
+					});
+					return;
+				}
+				this.selectIndex = e.currentTarget.id;
 			}
 		}
 	}
@@ -104,7 +105,8 @@
 		height: 1px;
 		width: 100%;
 	}
-	.bookStoreScrollView{
+
+	.bookStoreScrollView {
 		display: flex;
 		position: absolute;
 		top: 40px;
