@@ -2,7 +2,7 @@
 	<div class="recommendListContainer">
 		<scroll-view class="recommendListScroller" scroll-x="true" show-scrollbar="false">
 			<view v-for="(bookItem,index) in bookList" :class="{ 'recommendBookItemContainerMargin': index < (bookList.length - 1) ,'recommendBookItemContainer':true }"
-			 :key="index">
+			 :key="index" @tap.stop="onClickBook" v-bind:id="bookItem.title">
 				<view class="recommendBookContent">
 					<view class="recommendBookImage"></view>
 					<text class="recommendBookTitle">{{bookItem.title}}</text>
@@ -28,6 +28,13 @@
 					summary: '猫腻 著'
 				}],
 				currentIndex: 0
+			}
+		},
+		methods:{
+			onClickBook(e){
+				uni.navigateTo({
+					url:`../../../../book/LSJReadBookPage?bookId=${e.currentTarget.id}`
+				});
 			}
 		}
 	}

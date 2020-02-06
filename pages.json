@@ -8,6 +8,15 @@
 					"scrollIndicator":"none"
 				}
 			}
+		},
+		{
+			"path": "pages/book/LSJReadBookPage",
+			"style": {
+				"navigationStyle":"custom",
+				"app-plus":{
+					"scrollIndicator":"none"
+				}
+			}
 		}
 	],
 	"globalStyle": {
