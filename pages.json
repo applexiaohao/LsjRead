@@ -10,9 +10,18 @@
 			}
 		},
 		{
-			"path": "pages/book/LSJReadBookPage",
+			"path": "pages/book/read/LSJReadBookPage",
 			"style": {
-				"navigationStyle":"custom",
+				"navigationBarTitleText": "老司机小说网",
+				"app-plus":{
+					"scrollIndicator":"none"
+				}
+			}
+		},
+		{
+			"path": "pages/book/homepage/LSJBookHomePage",
+			"style": {
+				"navigationBarTitleText": "老司机小说网",
 				"app-plus":{
 					"scrollIndicator":"none"
 				}

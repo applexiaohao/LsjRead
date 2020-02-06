@@ -33,7 +33,7 @@
 		methods:{
 			onClickBook(e){
 				uni.navigateTo({
-					url:`../../../../book/LSJReadBookPage?bookId=${e.currentTarget.id}`
+					url:`../../../../book/homepage/LSJBookHomePage?bookId=${e.currentTarget.id}`
 				});
 			}
 		}
